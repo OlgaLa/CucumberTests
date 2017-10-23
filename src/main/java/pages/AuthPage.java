@@ -12,7 +12,7 @@ public class AuthPage extends TestBase {
     private static final By CREATE_ACCOUNT_BUTTON = get("AuthentificationPage.CreateAccountButton");
 
 
-    public AuthenticationPage(WebDriver driver) {  super(driver);   }
+    public AuthPage(WebDriver driver) {  super(driver);   }
 
     public void enterEmail(String email) {
         driver.findElement(EMAIL_INPUT).sendKeys(email);
