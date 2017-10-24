@@ -8,8 +8,8 @@ import static helpers.Locators.get;
 
 public class AuthPage extends TestBase {
 
-    private static final By EMAIL_INPUT = get("AuthentificationPage.EmailInput");
-    private static final By CREATE_ACCOUNT_BUTTON = get("AuthentificationPage.CreateAccountButton");
+    private static final By EMAIL_INPUT = get("AuthPage.EmailInput");
+    private static final By CREATE_ACCOUNT_BUTTON = get("AuthPage.CreateAccountButton");
 
 
     public AuthPage(WebDriver driver) {  super(driver);   }

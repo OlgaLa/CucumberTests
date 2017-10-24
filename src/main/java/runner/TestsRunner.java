@@ -31,7 +31,7 @@ public class TestsRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     protected WebDriver driver;
-    //protected HomePage homePage;
+    protected HomePage homePage;
 
     @BeforeClass(alwaysRun = true)
     public void setUpClass() throws Exception {
@@ -49,7 +49,7 @@ public class TestsRunner {
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(Constant.HOME_PAGE_URL);
-        //homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
     }
 
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
