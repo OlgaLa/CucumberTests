@@ -20,6 +20,7 @@ public class AuthSteps {
     public void click_on_sing_in_button() {
         try {
             authPage = homePage.getHeader().clickSignInButton();
+            
         } catch (Exception e) {
             System.out.print(e);
         }
