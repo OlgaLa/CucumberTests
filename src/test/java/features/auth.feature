@@ -2,7 +2,8 @@ Feature: Auth process
 #Test authentication page
 
   Scenario:
-    When I click on "Sign In" button
-#    And I enter new valid email
-#    And I click on "Create an account" button
-#    Then Registration page should be opened
+    Given User opens Home page
+    When User clicks on "Sign In" button
+    And User enters new valid email
+    And User clicks on "Create an account" button
+    Then Registration page should be opened
