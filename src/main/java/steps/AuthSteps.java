@@ -1,6 +1,7 @@
 package steps;
 
 import base.TestBase;
+import constants.ExpectedValues;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -8,6 +9,7 @@ import cucumber.api.java.en.When;
 import helpers.TestUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.junit.Assert;
 import pages.AuthPage;
 import pages.HomePage;
 import pages.RegistrationPage;
@@ -48,8 +50,7 @@ public class AuthSteps {
 
     @Then("^Registration page should be opened$")
     public void registration_page_is_opened() {
-        System.out.print("123");
+        Assert.assertEquals("Page title is incorrect.", registrationPage.getTitle(), ExpectedValues.REGISTRATION_PAGE_TITLE);
     }
-
 
 }

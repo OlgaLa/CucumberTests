@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
     protected static WebDriver driver;
-    protected HomePage homePage;
     private final Header HEADER;
 
 
@@ -45,7 +44,7 @@ public class TestBase {
         return driver;
     }
 
-    public void tearDown() {
+    public static void tearDown() {
         driver.close();
     }
 
