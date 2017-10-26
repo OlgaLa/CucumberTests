@@ -22,6 +22,7 @@ public class TestsRunner {
     @BeforeClass(alwaysRun = true)
     public void setUpClass() throws Exception {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+        //TestBase.createWebDriver();
     }
 
     @Test(groups = "cucumber", description = "Runs Cucumber Feature", dataProvider = "features")
@@ -37,6 +38,7 @@ public class TestsRunner {
     @AfterClass(alwaysRun = true)
     public void tearDownClass() throws Exception {
         testNGCucumberRunner.finish();
+        //TestBase.tearDown();
     }
 
 }

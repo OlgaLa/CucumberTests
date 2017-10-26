@@ -10,21 +10,27 @@ import helpers.TestUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import pages.AuthPage;
 import pages.HomePage;
 import pages.RegistrationPage;
+import runner.Hooks;
 
 public class AuthSteps {
 
-    private static final Log LOG = LogFactory.getLog(AuthSteps.class);
-
+    public WebDriver driver;
     protected HomePage homePage;
     protected AuthPage authPage;
     protected RegistrationPage registrationPage;
+    private static final Log LOG = LogFactory.getLog(AuthSteps.class);
+
+    public AuthSteps() {
+        driver = Hooks.driver;
+    }
 
     @Given("^User opens Home page$")
     public void open_home_page() {
-        homePage = new HomePage(TestBase.createWebDriver());
+        homePage = new HomePage(driver);
     }
 
     @When("^User clicks on \"Sign In\" button$")
